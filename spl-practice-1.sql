@@ -65,11 +65,17 @@ values
 ("Gowri", "Hindi-Teacher", 23, 13000);
 
 
-CREATE TABLE Brand(ID INTEGER, BrandName VARCHAR(40) UNIQUE, Size VARCHAR(30));
+CREATE TABLE Brand(ID INTEGER, BrandName VARCHAR(40) UNIQUE, Size VARCHAR(30))
 insert Brand (id, BrandName, Size)
-VALUES (4, 'Lacoste', 'Xlarge')
+VALUES (3, 'Bugari', 'XXl');
 
-SELECT*FROM Brand;
+ 
+use Brand;
+
+delete from Brand where id = 3 and BrandName = 'Bugari';
+
+update Brand set id = 2 where  BrandName='Versache';
+
 
 
 
