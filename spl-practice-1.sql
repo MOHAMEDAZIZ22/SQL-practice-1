@@ -15,7 +15,12 @@ age int not null,
 primary key (id)
 );
 
-select * from employee_table;
+select * from employee_table; 
+
+ 
+ alter table employee_table
+ add Email varchar(50)
+ after occupation;
 
 alter table employee_table
 add salary int
@@ -26,8 +31,9 @@ change column profession occupation
 varchar(30) 
 after name;
 
-insert into employee_table(name, occupation, age, salary)
+insert into employee_table(name, occupation, Email, age, salary)
 values
+("Aziz", "CEO", "MohamedAziz@gmail.com", 22, 500000000),
 ("Ana De Armas", "Actor", 30, 3000000),
 ("Conor", "Boxer", 38, 2000000),
 ("NaserAlaziz", "content creator", 28, 150000),
@@ -44,7 +50,7 @@ values
 ("Sam", "Medical Billing", 26, 10000),
 ("Mari", "Motivational Speacher", 23, 12000),
 ("Sruthi", "Teacher", 25, 18000),
-("Siva", "Influencer", 21, 15000),
+("SivaSakthi", "Influencer", 21, 15000),
 ("Ajay", "Reviewer", 25, 16000),
 ("Vicky", "Model", 21, 15000),
 ("Muthubalaji", "Streamer", 24, 13000),
@@ -56,6 +62,17 @@ values
 ("Ramani Shanker", "Frontend-Developer", 25, 12000),
 ("Sathya", "FullStockDeveloper", 24, 12000),
 ("Subbu", "BoxShop", 23, 15000),
-("Gowri", "Hindi-Teacher", 23, 13000)
+("Gowri", "Hindi-Teacher", 23, 13000);
+
+
+CREATE TABLE Brand(ID INTEGER, BrandName VARCHAR(40) UNIQUE, Size VARCHAR(30));
+insert Brand (id, BrandName, Size)
+VALUES (4, 'Lacoste', 'Xlarge')
+
+SELECT*FROM Brand;
+
+
+
+
 
 
